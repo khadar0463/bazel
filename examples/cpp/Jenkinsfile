@@ -10,7 +10,12 @@ echo 'From check-out stage'
 
 stage('Bazel Build') {
 echo 'From Bazel Build stage'
-archiveArtifacts artifacts: 'hello-world.cc', followSymlinks: false
+ sh '''
+	pwd
+	ls
+	cd examples/cpp
+	bazel build //main:hello-world
+	'''
 }
 
 
