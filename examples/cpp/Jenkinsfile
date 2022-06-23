@@ -10,6 +10,7 @@ echo 'From check-out stage'
 
 stage('Bazel Build') {
 echo 'From Bazel Build stage'
+archiveArtifacts artifacts: 'file.txt', followSymlinks: false
 }
 
 
