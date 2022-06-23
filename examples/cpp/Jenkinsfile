@@ -13,7 +13,7 @@ echo 'From Bazel Build stage'
  sh '''
 	pwd
 	ls
-	cd examples/cpp
+	cd bazel/examples/cpp
 	bazel build //main:hello-world
 	'''
 }
